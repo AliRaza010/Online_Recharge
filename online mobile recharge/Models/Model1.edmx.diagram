@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f048643bb7e4c05ab8c8803620b9bee" Name="Diagram1">
+        <EntityTypeShape EntityType="rechargefunctionsModel.adminreplay" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.CallerTune" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.cash_deposit" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.contactus" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.feedback" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.loginfo" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.offer" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.offers" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.roletable" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.transaction_table" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rechargefunctionsModel.userlogin" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="rechargefunctionsModel.FK_adminreplay_loginfo" ManuallyRouted="false" />
+        <AssociationConnector Association="rechargefunctionsModel.FK_cash_deposit_loginfo" ManuallyRouted="false" />
+        <AssociationConnector Association="rechargefunctionsModel.FK_feedback_feedback" ManuallyRouted="false" />
+        <AssociationConnector Association="rechargefunctionsModel.FK_loginfo_loginfo" ManuallyRouted="false" />
+        <AssociationConnector Association="rechargefunctionsModel.FK_roletable_loginfo" ManuallyRouted="false" />
+        <AssociationConnector Association="rechargefunctionsModel.FK_userlogin_loginfo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

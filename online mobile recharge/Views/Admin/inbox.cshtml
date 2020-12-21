@@ -1,0 +1,60 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.contactus>
+
+@{
+    ViewBag.Title = "inbox";
+    Layout = "~/views/shared/AdminLayout.cshtml";
+}
+
+<h2 style="background-color:cornflowerblue;color:white;text-align:center">INBOX</h2>
+<br />
+
+<table style="width:100%;background-color:blue;color:white;opacity:0.7;text-align:center" class="table">
+    <tr>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.id)
+
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.PHONE)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.MESSAGES)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PHONE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MESSAGES)
+            </td>
+            <td>
+                <button class="box-success">
+                    @Html.ActionLink("Replay", "REPLAY", new { id = item.id })
+                </button>
+
+            </td>
+        </tr>
+    }
+
+</table>
+<script src="~/Scripts/jquery-1.10.2.js"></script>

@@ -1,0 +1,85 @@
+﻿.how-it-work {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 120px;
+    z-index: 1;
+}
+
+    .how-it-work.how-it-work-bg {
+        background-image: url('../Images/how-it-work-bg.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .how-it-work:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .60;
+        content: '';
+        z-index: -1;
+    }
+
+    .how-it-work .section-title h2 {
+        color: #fff;
+    }
+
+    .how-it-work .single-how-it-work-box {
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 50px 30px 40px 30px;
+    }
+
+        .how-it-work .single-how-it-work-box .icon {
+            display: inline-block;
+            position: relative;
+            background: #3880f4;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+        }
+
+            .how-it-work .single-how-it-work-box .icon i {
+                color: #fff;
+                font-size: 30px;
+            }
+
+            .how-it-work .single-how-it-work-box .icon svg {
+                fill: #fff;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -ms-transform: translate(-50%, -50%);
+                /* IE 9 */
+                -webkit-transform: translate(-50%, -50%);
+                /* Chrome, Safari, Opera */
+                transform: translate(-50%, -50%);
+                -webkit-transition: all 0.5s ease-in;
+                -moz-transition: all 0.5s ease-in;
+                -o-transition: all 0.5s ease-in;
+                transition: all 0.5s ease-in;
+            }
+
+        .how-it-work .single-how-it-work-box h4 {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .how-it-work .single-how-it-work-box:hover .icon {
+            background-color: #fff;
+        }
+
+            .how-it-work .single-how-it-work-box:hover .icon svg {
+                fill: #3880f4;
+            }

@@ -1,0 +1,70 @@
+﻿@model online_mobile_recharge.Models.loginfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/views/shared/AdminLayout.cshtml";
+}
+<h2 style="background-color:cornflowerblue;color:white;text-align:center">USER DETAIL LIST</h2>
+<br />
+
+<div style="background-color:gray;opacity:0.7;font-weight:bold;color:white;font-size:larger">
+ 
+    <dl  class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mpin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mpin)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+       
+        </dl>
+       
+
+</div>
+

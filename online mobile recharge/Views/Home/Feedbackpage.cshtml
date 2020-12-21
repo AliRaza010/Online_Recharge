@@ -1,0 +1,89 @@
+﻿@model online_mobile_recharge.Models.feedback
+
+@{
+    ViewBag.Title = "Feedbackpage";
+    Layout = "~/views/shared/feedbackLayout.cshtml";
+}
+
+<link href="~/Content/FEEDBACK.css" rel="stylesheet" />
+
+@using (Ajax.BeginForm("Feedbackpage", "Home", new AjaxOptions
+{
+    UpdateTargetId = "ajaxresponce",
+    HttpMethod = "POST",
+    Confirm = "ARE YOU SURE",
+    LoadingElementId = "loader",
+
+
+}))
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+
+        <div class="col-lg-offset-4 col-lg-4" id="panel">
+            <h2>FEEDBACK</h2>
+            <div style="color:darkred ;font-size:20px;font-weight:bolder; text-align:center;position:relative;top:25PX" id="ajaxresponce">
+            </div>
+            <div style="text-align:center;display:none" id="loader">
+                <img src="~/Content/image/aaa.gif" width="100px" />
+            </div>
+            <br />
+            <br />
+            <form>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="group">
+                    @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", id = "text", autocomplete = "off" } })
+                    @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Name</label>
+                </div>
+                <div class="group">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", id = "text", autocomplete = "off" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                </div>
+                <div class="group">
+                    @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @class = "form-control", id = "text", autocomplete = "off" } })
+                    @Html.ValidationMessageFor(model => model.phone, "", new { @class = "text-danger" })
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Mobile No</label>
+                </div>
+
+                <div class="group">
+                    EXCELLENT
+                    @Html.RadioButtonFor(model => model.rating, "ExcellenT")
+                    GOOD
+                    @Html.RadioButtonFor(model => model.rating, "Good")
+                    AVERAGE
+                    @Html.RadioButtonFor(model => model.rating, "Average")
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Ratings</label>
+                </div>
+
+
+
+
+
+
+                <div class="group">
+                    @Html.EditorFor(model => model.feedback1, new { htmlAttributes = new { @class = "form-control", id = "text", autocomplete = "off" } })
+                    @Html.ValidationMessageFor(model => model.feedback1, "", new { @class = "text-danger" })
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Description</label>
+                </div>
+                <div class="group">
+                    <center> <button style="background-color:gray" type="submit" class="btn ">Send <span class="glyphicon glyphicon-send"></span></button></center>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

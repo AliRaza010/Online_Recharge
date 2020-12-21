@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rechargefunctionsModelStoreContainer" CdmEntityContainer="rechargefunctionsEntities1">
+    <EntitySetMapping Name="adminreplay">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.adminreplay">
+        <MappingFragment StoreEntitySet="adminreplay">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="accountno" ColumnName="accountno" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="replay" ColumnName="replay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CallerTune">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.CallerTune">
+        <MappingFragment StoreEntitySet="CallerTune">
+          <ScalarProperty Name="Tansaction_id" ColumnName="Tansaction_id" />
+          <ScalarProperty Name="Transaction_Name" ColumnName="Transaction_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="TUNE_CODE" ColumnName="TUNE_CODE" />
+          <ScalarProperty Name="TUNE_NAME" ColumnName="TUNE_NAME" />
+          <ScalarProperty Name="CHARGES" ColumnName="CHARGES" />
+          <ScalarProperty Name="SINGER" ColumnName="SINGER" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cash_deposit">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.cash_deposit">
+        <MappingFragment StoreEntitySet="cash_deposit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ACCOUNT_NUMBER" ColumnName="ACCOUNT_NUMBER" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contactus">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.contactus">
+        <MappingFragment StoreEntitySet="contactus">
+          <ScalarProperty Name="replay" ColumnName="replay" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="MESSAGES" ColumnName="MESSAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="feedback">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.feedback">
+        <MappingFragment StoreEntitySet="feedback">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="feedback1" ColumnName="feedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loginfo">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.loginfo">
+        <MappingFragment StoreEntitySet="loginfo">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="confirm_password" ColumnName="confirm_password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="mpin" ColumnName="mpin" />
+          <ScalarProperty Name="image_locations" ColumnName="image_locations" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Transaction_Name" ColumnName="Transaction_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="mpincheck" ColumnName="mpincheck" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="offer_recharge_consumer_numbers" ColumnName="offer/recharge/consumer_numbers" />
+          <ScalarProperty Name="paymentmethod" ColumnName="paymentmethod" />
+          <ScalarProperty Name="operators" ColumnName="operators" />
+          <ScalarProperty Name="accountno" ColumnName="accountno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="offer">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.offer">
+        <MappingFragment StoreEntitySet="offer">
+          <ScalarProperty Name="Transaction_id" ColumnName="Transaction_id" />
+          <ScalarProperty Name="Transaction_Name" ColumnName="Transaction_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="mpin" ColumnName="mpin" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="offer_recharge_consumernumber" ColumnName="offer/recharge/consumernumber" />
+          <ScalarProperty Name="paymentmethod" ColumnName="paymentmethod" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="offercode" ColumnName="offercode" />
+          <ScalarProperty Name="offer_type" ColumnName="offer_type" />
+          <ScalarProperty Name="offer_description" ColumnName="offer_description" />
+          <ScalarProperty Name="offer_price" ColumnName="offer_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="offers">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.offers">
+        <MappingFragment StoreEntitySet="offers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Network" ColumnName="Network" />
+          <ScalarProperty Name="Description_" ColumnName="Description_" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Transaction_name" ColumnName="Transaction_name" />
+          <ScalarProperty Name="Payment_Methods" ColumnName="Payment_Methods" />
+          <ScalarProperty Name="account_no" ColumnName="account_no" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Reciever_Mobile_No" ColumnName="Reciever_Mobile_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roletable">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.roletable">
+        <MappingFragment StoreEntitySet="roletable">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transaction_table">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.transaction_table">
+        <MappingFragment StoreEntitySet="transaction_table">
+          <ScalarProperty Name="Transaction_id" ColumnName="Transaction_id" />
+          <ScalarProperty Name="Transaction_Name" ColumnName="Transaction_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="mpin" ColumnName="mpin" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="offer_recharge_consumer_numbers" ColumnName="offer/recharge/consumer_numbers" />
+          <ScalarProperty Name="paymentmethod" ColumnName="paymentmethod" />
+          <ScalarProperty Name="operators_" ColumnName="operators_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userlogin">
+      <EntityTypeMapping TypeName="rechargefunctionsModel.userlogin">
+        <MappingFragment StoreEntitySet="userlogin">
+          <ScalarProperty Name="mpin" ColumnName="mpin" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_id" ColumnName="user id" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="Transaction_Name" ColumnName="Transaction_Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="mpincheck" ColumnName="mpincheck" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="offer_recharge_consumer_numbers" ColumnName="offer/recharge/consumer_numbers" />
+          <ScalarProperty Name="paymentmethod" ColumnName="paymentmethod" />
+          <ScalarProperty Name="operators" ColumnName="operators" />
+          <ScalarProperty Name="account_no" ColumnName="account_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

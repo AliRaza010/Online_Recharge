@@ -1,0 +1,58 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.offer>
+
+@{
+    ViewBag.Title = "POSTPAID_BILLS";
+    Layout = "~/views/shared/allLayout.cshtml";
+
+}
+<link href="~/Content/bill.css" rel="stylesheet" />
+<h2 style="background-color:darkblue;color:white;text-align:center">POSTPAID_BILLS</h2>
+
+<div style=" background-color:gray; opacity:0.8">
+<table class="table">
+    <tr>
+        
+        <th style="text-align:center;font-weight:bold">
+            
+            @Html.DisplayNameFor(model => model.offercode)
+        </th>
+        <th style="text-align:center;font-weight:bold">
+            @Html.DisplayNameFor(model => model.offer_type)
+        </th>
+        <th style="text-align:center;font-weight:bold">
+            @Html.DisplayNameFor(model => model.offer_description)
+        </th>
+        <th style="text-align:center;font-weight:bold">
+            @Html.DisplayNameFor(model => model.offer_price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td  style="text-align:center;font-weight:bold">
+            <input type="radio" id="male" name="gender" value="male">
+            @Html.DisplayFor(modelItem => item.offercode)
+        </td>
+        <td style="text-align:center;font-weight:bold">
+            @Html.DisplayFor(modelItem => item.offer_type)
+        </td>
+      
+        <td style="text-align:center;font-weight:bold">
+            @Html.DisplayFor(modelItem => item.offer_description)
+        </td>
+        <td style="text-align:center;font-weight:bold">
+            @Html.DisplayFor(modelItem => item.offer_price)
+        </td>
+        <td  style="text-align:center;font-weight:bold">
+           <button class="btn-google"> @Html.ActionLink("PAY", "Edit", new { id=item.offercode }) </button>
+          
+        </td>
+    </tr>
+}
+
+</table>
+    </div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <link href="~/Content/footer.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myPage">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#myPage">HOME</a></li>
+                    <li><a href="#band">RECHARGE NOW</a></li>
+                    <li><a href="#tour">BILL PAY</a></li>
+                    <li><a href="#contact">MONEY TRANSFER</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="#contact">FEEDBACK</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            TRANSACTION HISTORY
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#contact">MY ACCOUNT</a></li>
+                    <li><a href="#contact">ABOUT US</a></li>
+                    <li><a href="#contact">CUSTOM CARE</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="myCarousel" class="carousel slide col-sm-12" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+
+
+                        <img src="~/Images/woman-3083379_1920.jpg" alt="New York" class="w-100 h-100" wid>
+                        <div class="carousel-caption">
+                            <h1 style="position:relative;bottom:200px;right:250px">MOBILE RECHARGE ONLINE</h1>
+                            <h4 style="position:relative;bottom:250px;right:250px">Its a process to get load online when you need <br />its easy and anywhere </h4>
+                            <button style="position:relative;bottom:300px;right:250px" class="btn-danger">@Html.ActionLink(" GET RECHARGE", "onlinerecharge", "Home")</button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+
+
+
+                        <img src="~/Images/phone-1149925_1920.jpg" alt="Chicago" class="w-100 h-100">
+                        <div class="carousel-caption">
+                            <<h1 style="position:relative;bottom:250px;left:250px">PAY POSTPAID BILLS</h1>
+                            <h4 style="position:relative;bottom:300px;left:250px">Its a process to Pay Bill online Before Last Date Without Go AnyWhere <br />its easy and anywhere </h4>
+                            <button style="position:relative;bottom:350px;left:250px" class="btn-danger">@Html.ActionLink(" POSTPAID BILLS", "POSTPAID_BILLS", "User")</button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+
+                        <img src="~/Images/man-1868730_1920.jpg" alt="Los Angeles" class="w-100 h-100">
+                        <div class="carousel-caption">
+                            <h1 style="position:relative;bottom:250px;left:250px">MONEY TRANSFER</h1>
+                            <h4 style="position:relative;bottom:300px;left:250px">Its a process to Transfer your money online to Any city and Any Country <br />its easy and anywhere </h4>
+                            <button style="position:relative;bottom:350px;left:250px" class="btn-danger">@Html.ActionLink("MONEY TRANSFER", "Moneytransfer", "Home")</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div id="band" class="container text-center">
+        <h1><B>ONLINE MOBILE RECHARGE</B></h1><br />
+
+        <p id="para">Online Mobile Recharge is a web-based application developed in ASP.NET to recharge mobile phones. The project focuses at providing an easy and reliable platform to recharge mobile of any telecommunication company through online without buying recharge card. The registered users of the system can recharge their prepaid mobile phones from anywhere at any time.The proposed project for recharging mobiles developed to automate the mobile recharging process. It roots out the manual card system of recharge and introduces a new and genuine online recharge process.The online mobile recharge system is beneficial to both the admins and users. Using the online application, the admin can add new operators, tariff plans, offers and update or modify the existing tariff plans. It helps the users in creating their account, and then recharging the mobiles phones at any time..</p>
+        <br>
+
+
+    </div>
+
+    <br />
+    <div class="container-fluid">
+        <div class="container-fluid img">
+            <div class="side">
+                <ul>
+                    <li>Money-back Guarantee</li>
+                    <li>Make Safe And Secure Payments</li>
+                    <li>No Unexpected Fees</li>
+                </ul>
+
+            </div>
+        </div>
+    </div><br />
+    <div>
+        <br />
+        <h1 style="text-align:center">Why Choose Online Mobile <span style="color:red">Recharge?</span></h1>
+        <br /><br />
+
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <img style="position:relative;left:35%" img src="~/Images/Cab_-_Line_-_Expand-01-512.png" width="80" height="80" />
+                    <h1 style="text-align:center;letter-spacing:2px"> <b>RECHARGE</b></h1>
+                    <h6>Integer feugiat eros ut sapien auctor porta. Nulla vitae dolor quis elit porttitor lacinia a a felis.</h6>
+
+                </div>
+
+
+                <div class="col-md-3">
+                    <img style="position:relative;left:30%" src="~/Images/unnamed.png" width="80" height="80" />
+                    <h1 style="text-align:center;letter-spacing:2px"><b>BILL PAY</b></h1>
+                    <h6>Integer feugiat eros ut sapien auctor porta. Nulla vitae dolor quis elit porttitor lacinia a a felis.</h6>
+
+
+
+                </div>
+
+
+                <div class="col-md-3">
+                    <img style="position:relative;left:30%" src="~/Images/trust.png" width="80" height="80" />
+                    <h1 style="text-align:center;letter-spacing:2px"><b>Trusted</b></h1>
+                    <h6>Integer feugiat eros ut sapien auctor porta. Nulla vitae dolor quis elit porttitor lacinia a a felis.</h6>
+
+
+                </div>
+
+                <div class="col-md-3">
+                    <img style="position:relative;left:30%" src="~/Images/10-512.png" width="80" height="80" />
+                    <h1 style="text-align:center;letter-spacing:2px"><b>Cash Deposit</b></h1>
+                    <h6>Integer feugiat eros ut sapien auctor porta. Nulla vitae dolor quis elit porttitor lacinia a a felis.</h6>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div><br />
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+        <h2><B>GET ADVANTEGE</B></h2>
+        <h4>What we have created</h4><br />
+        <div class="row text-center slideanim">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+
+                    <img src="~/images/Single-SIM-Multi-Recharge-Distributor.jpg" width="400" height="300" />
+                    <br />
+                    <p><strong>@Html.ActionLink(" RECHARGE NOW", "onlinerecharge", "Home")</strong></p>
+                    <p>HERE YOU CAN GET RECHARGE</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+
+                <div class="thumbnail">
+                    <img src="~/images/BILL.png" width="400" height="300">
+                    <br />
+                    <p><strong>@Html.ActionLink(" BILL PAY", "POSTPAID_BILLS", "Home")</strong></p>
+                    <p>HERE YOU CAN PAY YOUR BILLS</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="~/images/MONEY.PNG" width="400" height="300">
+
+                    <p><strong>@Html.ActionLink("MONEY TRANSFER", "Moneytransfer", "Home")</strong></p>
+                    <p>HERE YOU CAN SEND MONEY ONLINE</p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="col-sm-4">
+            <div class="thumbnail">
+
+
+                <img src="~/Images/JC-DepositMoney-Thumb.png" width="400" height="300" />
+
+                <p><strong>@Html.ActionLink("DEPOSIT MONEY", "Deposit", "Home")</strong></p>
+                <p>HERE YOU CAN DEPOSIT MONEY</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+
+
+                <img src="~/Images/airtel-hanset-special-offers.png" width="400" height="300" />
+
+                <p><strong>@Html.ActionLink("SPECIAL OFFERS", "Viewoffers", "User")</strong></p>
+                <p>HERE YOU CAN GET SPECIAL OFFERS</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="thumbnail">
+
+
+
+
+
+                <img src="~/Images/AAA.PNG" width="400" height="300" />
+                <p><strong>TRANSACTION</strong></p>
+                <p>HERE YOU CAN VIEW TRANSACTION</p>
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+
+        <div class="container info" align="center">
+            <h2><B>INFORMATION ABOUT <span style="color:red"> RECHARGE</span></B></h2>
+
+
+            <br />
+            <br />
+            <div class="container">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div style="background-color:gray;color:white" class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">What is OnlineRecharge?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                No matter how many borders you cross, thanks to Recharge’s fast and
+                                safe service, you’ll easily stay in touch with one another. Recharge yours or
+                                someone else’s call credit or data 24/7 in over 140 countries. Depending on the product
+                                you choose, we’ll directly send the credit to your phone or
+                                as a recharge code by email. We make sure you’ll always stay connected.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div style="background-color:gray;color:white" class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How does the mobile recharge work?</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body" align="center">
+                                <h4>Recharge phone credit or data in four simple steps</h4>
+                                <br />
+                                <br />
+                                <h3>
+                                    1. Select carrier and product
+                                </h3>
+                                <p>
+                                    Let us know which product you’re going to buy
+
+                                </p>
+                                <br />
+                                <h3>
+                                    3. Fill in your information
+                                </h3>
+                                <p>
+                                    Fill in your email address and/or the recipient’s phone number
+
+                                </p>
+                                <br />
+                                <h3>
+                                    4. Pay and receive
+                                </h3>
+                                <p>
+                                    After your payment the order will be sent immediately!
+
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div style="background-color:gray;color:white" class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Make safe and secure payments</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <h3>
+                                    We make sure the information you give is secured
+
+                                </h3>
+                                <p>
+                                    Privacy and safety are very important to us at Recharge.com. That’s why there’s a Privacy Policy and an explanation on how safe Recharge.com is. You can pay online without worrying!
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+    <br />
+
+
+    <link href="~/Content/howitwork.css" rel="stylesheet" />
+    <section class="how-it-work how-it-work-bg" id="whow-work">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="section-title">
+                        <h2 style="text-align:center"><b>How it Works?</b></h2><br />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-how-it-work-box">
+                        <div class="icon">
+                            <svg width="30px" height="30px">
+                                <path fill-rule="evenodd" d="M15.023,-0.001 L15.387,-0.001 C17.219,0.055 19.046,0.417 20.733,1.136 C22.351,1.808 23.841,2.776 25.140,3.947 C27.982,6.504 29.769,10.191 29.999,14.003 C30.021,14.325 29.630,14.558 29.356,14.390 C29.150,14.287 29.121,14.037 29.104,13.833 C29.017,12.681 28.764,11.544 28.398,10.449 C27.760,10.394 27.143,10.204 26.517,10.079 C25.908,9.927 25.254,9.873 24.710,9.534 C23.960,9.085 23.383,8.274 23.370,7.383 C23.343,6.948 23.552,6.534 23.499,6.098 C23.430,5.491 23.116,4.942 23.044,4.334 C22.995,4.036 23.029,3.734 23.078,3.438 C21.544,2.391 19.816,1.613 17.993,1.234 C14.612,0.480 10.968,1.063 7.971,2.787 C8.315,2.933 8.659,3.080 9.003,3.227 C9.134,3.286 9.279,3.279 9.419,3.280 C10.555,3.271 11.690,3.280 12.826,3.276 C12.976,3.281 13.144,3.273 13.266,3.376 C13.474,3.528 13.484,3.871 13.288,4.037 C13.165,4.157 12.983,4.154 12.824,4.155 C11.610,4.152 10.396,4.155 9.183,4.154 C8.970,4.162 8.770,4.079 8.578,3.999 C8.073,3.783 7.568,3.570 7.062,3.355 C6.349,3.846 5.681,4.400 5.061,5.005 C5.312,5.277 5.591,5.525 5.817,5.819 C6.270,6.411 6.380,7.243 6.101,7.933 C5.992,8.204 5.857,8.465 5.736,8.731 C6.120,9.604 6.519,10.469 6.900,11.343 C7.572,11.358 8.244,11.329 8.916,11.353 C9.305,11.364 9.652,11.658 9.732,12.036 C9.982,13.123 10.215,14.215 10.461,15.303 C11.455,15.671 12.445,16.053 13.439,16.420 C13.796,16.553 14.148,16.714 14.448,16.954 C15.166,17.511 15.576,18.438 15.498,19.343 C15.441,19.804 15.451,20.271 15.465,20.735 C15.480,21.186 15.781,21.605 16.200,21.770 C16.707,21.978 17.231,22.143 17.739,22.349 C18.037,22.465 18.256,22.757 18.274,23.077 C18.299,23.410 18.279,23.745 18.284,24.078 C18.278,24.389 18.320,24.711 18.212,25.010 C17.947,25.800 17.655,26.580 17.393,27.371 C17.342,27.885 17.390,28.406 17.373,28.923 C17.716,28.846 18.065,28.795 18.404,28.699 C18.526,28.607 18.608,28.474 18.708,28.360 C19.905,26.922 21.103,25.485 22.299,24.046 C22.495,23.804 22.731,23.573 22.807,23.261 C22.978,22.730 22.798,22.159 22.956,21.627 C23.020,21.410 23.205,21.254 23.405,21.164 C23.812,20.977 24.227,20.806 24.633,20.617 C25.016,20.450 25.317,20.015 25.199,19.590 C25.160,19.467 25.056,19.358 24.925,19.338 C24.595,19.279 24.237,19.382 23.926,19.228 C23.728,19.139 23.590,18.962 23.492,18.773 C23.165,18.144 22.834,17.517 22.511,16.885 C22.381,16.638 22.241,16.380 22.010,16.211 C21.772,16.024 21.469,15.941 21.169,15.937 C20.386,15.926 19.603,15.948 18.821,15.936 C18.614,15.934 18.397,15.939 18.208,16.034 C17.969,16.155 17.798,16.373 17.565,16.504 C17.015,16.837 16.286,16.823 15.740,16.489 C14.972,16.022 14.205,15.555 13.444,15.080 C13.175,14.915 13.024,14.603 13.033,14.292 C13.033,13.767 13.028,13.243 13.036,12.718 C13.031,12.289 13.393,11.897 13.825,11.876 C14.176,11.856 14.529,11.869 14.881,11.862 C15.183,11.868 15.529,11.852 15.767,12.072 C15.992,12.285 16.151,12.554 16.348,12.793 C16.956,11.673 17.557,10.550 18.166,9.431 C18.304,9.165 18.574,8.964 18.879,8.948 C19.257,8.925 19.636,8.947 20.014,8.937 C20.021,8.433 19.999,7.927 20.023,7.423 C20.055,7.015 20.423,6.717 20.808,6.652 C19.865,6.046 18.944,5.405 17.994,4.809 C17.575,4.556 17.137,4.306 16.647,4.222 C16.102,4.122 15.545,4.180 14.995,4.145 C14.733,4.124 14.545,3.826 14.638,3.581 C14.696,3.376 14.914,3.266 15.118,3.279 C15.778,3.281 16.453,3.247 17.097,3.422 C17.745,3.608 18.310,3.987 18.877,4.338 C19.661,4.843 20.435,5.365 21.216,5.875 C21.399,5.997 21.585,6.141 21.667,6.353 C21.823,6.717 21.682,7.178 21.349,7.394 C21.215,7.488 21.050,7.509 20.895,7.545 C20.888,8.035 20.905,8.526 20.891,9.016 C20.872,9.426 20.519,9.787 20.107,9.811 C19.722,9.832 19.336,9.807 18.950,9.822 C18.370,10.912 17.778,11.997 17.194,13.086 C17.101,13.258 16.997,13.435 16.829,13.544 C16.503,13.766 16.019,13.726 15.747,13.436 C15.551,13.224 15.391,12.982 15.220,12.750 C14.784,12.739 14.349,12.747 13.913,12.746 C13.913,13.278 13.911,13.811 13.914,14.343 C14.640,14.784 15.362,15.229 16.084,15.674 C16.311,15.816 16.584,15.911 16.853,15.847 C17.216,15.773 17.436,15.440 17.756,15.282 C18.097,15.092 18.494,15.048 18.878,15.056 C19.681,15.062 20.485,15.042 21.288,15.062 C21.892,15.079 22.482,15.360 22.874,15.819 C23.063,16.033 23.193,16.291 23.323,16.543 C23.654,17.175 23.981,17.807 24.308,18.440 C24.569,18.444 24.831,18.428 25.089,18.473 C25.614,18.575 26.040,19.038 26.101,19.567 C26.161,20.075 25.968,20.595 25.627,20.970 C25.377,21.254 25.026,21.412 24.684,21.558 C24.378,21.695 24.069,21.828 23.765,21.970 C23.774,22.720 23.824,23.556 23.324,24.177 C22.225,25.535 21.080,26.857 19.983,28.217 C22.367,27.309 24.503,25.762 26.087,23.766 C27.767,21.672 28.831,19.088 29.081,16.416 C29.107,16.224 29.104,16.021 29.187,15.842 C29.316,15.602 29.683,15.552 29.870,15.752 C30.051,15.922 29.991,16.190 29.974,16.409 C29.758,18.773 28.965,21.082 27.680,23.081 C26.402,25.077 24.641,26.764 22.588,27.955 C20.379,29.251 17.833,29.950 15.273,29.999 L14.784,29.999 C12.010,29.951 9.248,29.143 6.917,27.637 C3.948,25.740 1.672,22.779 0.650,19.409 C-0.142,16.833 -0.204,14.047 0.421,11.430 C1.157,8.351 2.933,5.536 5.386,3.531 C8.068,1.300 11.531,0.029 15.023,-0.001 ZM23.891,4.046 C23.949,4.652 24.249,5.198 24.348,5.796 C24.417,6.162 24.402,6.541 24.309,6.902 C24.118,7.534 24.393,8.237 24.930,8.608 C25.101,8.761 25.298,8.890 25.523,8.946 C26.357,9.158 27.200,9.334 28.040,9.519 C27.131,7.393 25.690,5.501 23.891,4.046 ZM3.616,6.683 C3.327,7.121 3.003,7.539 2.760,8.006 C2.030,9.270 1.486,10.644 1.185,12.074 C0.533,15.117 0.920,18.374 2.295,21.169 C3.549,23.745 5.608,25.923 8.115,27.319 C10.634,28.748 13.605,29.345 16.485,29.046 C16.499,28.503 16.485,27.960 16.492,27.418 C16.493,27.299 16.526,27.182 16.563,27.070 C16.831,26.268 17.131,25.476 17.393,24.672 C17.420,24.168 17.393,23.662 17.400,23.156 C16.899,22.970 16.396,22.788 15.896,22.597 C15.347,22.388 14.900,21.934 14.702,21.382 C14.522,20.915 14.588,20.407 14.578,19.919 C14.564,19.585 14.662,19.254 14.618,18.921 C14.558,18.402 14.278,17.913 13.856,17.604 C13.570,17.386 13.220,17.285 12.890,17.157 C11.983,16.811 11.074,16.472 10.168,16.126 C9.877,16.026 9.654,15.769 9.594,15.468 C9.354,14.388 9.117,13.308 8.879,12.227 C8.218,12.221 7.558,12.232 6.897,12.223 C6.554,12.222 6.234,12.005 6.100,11.692 C5.725,10.872 5.363,10.045 4.989,9.224 C4.921,9.066 4.837,8.902 4.858,8.725 C4.891,8.344 5.110,8.018 5.255,7.675 C5.448,7.260 5.389,6.751 5.138,6.375 C4.935,6.111 4.681,5.891 4.458,5.645 C4.175,5.990 3.885,6.328 3.616,6.683 Z"></path>
+                            </svg>
+                        </div>
+                        <a href="#"><h4>Select Your Country</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-how-it-work-box">
+                        <div class="icon">
+                            <svg width="22px" height="30px">
+                                <path fill-rule="evenodd" d="M21.998,5.451 C15.456,5.452 8.913,5.456 2.371,5.449 C2.373,3.633 2.372,1.816 2.371,-0.001 L21.999,-0.001 C21.997,1.816 22.004,3.634 21.998,5.451 ZM3.346,0.949 C3.347,2.135 3.345,3.320 3.344,4.506 C9.236,4.510 15.130,4.506 21.022,4.508 C21.026,3.322 21.022,2.135 21.025,0.948 C15.131,0.946 9.239,0.943 3.346,0.949 ZM18.008,2.249 C18.325,2.254 18.642,2.255 18.960,2.247 C18.978,2.566 18.968,2.885 18.961,3.204 C18.641,3.197 18.321,3.199 18.002,3.204 C17.988,2.886 17.984,2.567 18.008,2.249 ZM16.045,2.260 C16.369,2.248 16.693,2.257 17.017,2.252 C17.021,2.569 17.021,2.885 17.017,3.202 C16.692,3.197 16.368,3.206 16.044,3.194 C16.048,2.882 16.047,2.571 16.045,2.260 ZM14.106,2.250 C14.427,2.257 14.749,2.252 15.070,2.255 C15.072,2.567 15.068,2.880 15.074,3.192 C14.749,3.207 14.423,3.197 14.098,3.200 C14.100,2.883 14.090,2.567 14.106,2.250 ZM12.153,3.204 C12.146,2.886 12.145,2.567 12.154,2.250 C12.473,2.257 12.792,2.255 13.110,2.248 C13.135,2.566 13.130,2.885 13.110,3.204 C12.791,3.199 12.472,3.200 12.153,3.204 ZM6.250,7.451 C6.133,6.681 6.719,5.899 7.505,5.760 C8.357,5.570 9.279,6.194 9.379,7.038 C9.535,7.871 8.846,8.727 7.980,8.789 C7.150,8.897 6.332,8.256 6.250,7.451 ZM8.407,7.383 C8.525,6.945 8.010,6.531 7.586,6.720 C7.188,6.866 7.083,7.432 7.413,7.696 C7.728,8.004 8.340,7.813 8.407,7.383 ZM11.808,5.773 C12.694,5.535 13.676,6.202 13.756,7.087 C13.876,7.893 13.218,8.699 12.389,8.787 C11.566,8.912 10.729,8.293 10.624,7.494 C10.485,6.735 11.038,5.944 11.808,5.773 ZM12.140,7.849 C12.520,7.891 12.864,7.517 12.778,7.157 C12.727,6.814 12.322,6.588 11.990,6.710 C11.811,6.769 11.664,6.912 11.609,7.088 C11.483,7.431 11.766,7.835 12.140,7.849 ZM10.627,11.309 C10.475,10.532 11.053,9.713 11.852,9.566 C12.731,9.357 13.681,10.022 13.756,10.895 C13.872,11.698 13.220,12.500 12.393,12.587 C11.574,12.713 10.736,12.105 10.627,11.309 ZM12.779,10.964 C12.730,10.617 12.317,10.386 11.982,10.514 C11.760,10.589 11.598,10.795 11.583,11.023 C11.550,11.334 11.816,11.634 12.138,11.651 C12.516,11.696 12.860,11.325 12.779,10.964 ZM12.506,16.372 C11.918,16.495 11.275,16.257 10.920,15.787 C10.553,15.330 10.506,14.665 10.787,14.157 C11.030,13.699 11.524,13.381 12.054,13.340 C12.879,13.251 13.686,13.901 13.756,14.701 C13.863,15.463 13.280,16.229 12.506,16.372 ZM11.934,14.335 C11.523,14.502 11.459,15.115 11.838,15.349 C12.185,15.609 12.753,15.364 12.784,14.938 C12.859,14.504 12.340,14.135 11.934,14.335 ZM16.150,13.386 C16.936,13.164 17.835,13.646 18.060,14.410 C18.318,15.143 17.893,16.014 17.149,16.290 C16.555,16.533 15.814,16.373 15.386,15.904 C14.944,15.446 14.844,14.717 15.150,14.164 C15.352,13.783 15.724,13.495 16.150,13.386 ZM16.162,15.314 C16.496,15.618 17.119,15.394 17.149,14.945 C17.227,14.523 16.736,14.149 16.331,14.323 C15.919,14.463 15.816,15.054 16.162,15.314 ZM16.668,8.793 C15.855,8.872 15.061,8.235 14.984,7.446 C14.874,6.705 15.415,5.952 16.160,5.777 C17.050,5.527 18.044,6.196 18.122,7.088 C18.249,7.923 17.536,8.759 16.668,8.793 ZM16.339,6.715 C15.925,6.850 15.812,7.436 16.153,7.702 C16.471,8.003 17.070,7.813 17.143,7.389 C17.264,6.956 16.764,6.539 16.339,6.715 ZM16.742,12.590 C15.928,12.705 15.104,12.098 14.990,11.309 C14.847,10.553 15.390,9.762 16.155,9.581 C17.024,9.333 18.002,9.964 18.115,10.833 C18.271,11.659 17.601,12.510 16.742,12.590 ZM16.332,10.520 C15.901,10.666 15.815,11.291 16.194,11.538 C16.538,11.811 17.118,11.570 17.152,11.140 C17.228,10.718 16.735,10.345 16.332,10.520 ZM5.872,23.438 C5.879,19.355 5.872,15.273 5.875,11.191 C5.878,10.932 5.904,10.670 5.997,10.426 C6.245,9.742 6.933,9.232 7.680,9.191 C8.406,9.130 9.140,9.517 9.498,10.130 C9.693,10.448 9.766,10.821 9.762,11.188 C9.757,13.258 9.766,15.327 9.759,17.396 C10.126,17.232 10.532,17.119 10.940,17.176 C11.420,17.215 11.849,17.465 12.188,17.785 C12.611,17.359 13.223,17.104 13.837,17.173 C14.324,17.207 14.757,17.463 15.098,17.787 C15.507,17.379 16.084,17.119 16.677,17.168 C18.234,17.277 18.524,18.863 18.495,18.871 C18.497,22.580 18.498,26.290 18.495,29.999 L17.521,29.999 C17.519,26.367 17.524,22.734 17.519,19.101 C17.537,18.723 17.315,18.345 16.954,18.191 C16.545,17.998 16.015,18.142 15.761,18.507 C15.593,18.713 15.606,18.986 15.535,19.227 C15.432,19.510 15.022,19.604 14.792,19.409 C14.580,19.256 14.629,18.973 14.554,18.755 C14.422,18.298 13.888,18.014 13.417,18.133 C13.134,18.196 12.890,18.395 12.766,18.649 C12.673,18.840 12.690,19.061 12.612,19.257 C12.494,19.519 12.106,19.598 11.884,19.414 C11.703,19.290 11.711,19.058 11.669,18.870 C11.612,18.443 11.193,18.109 10.756,18.106 C10.301,18.085 9.851,18.426 9.789,18.869 C9.746,19.045 9.754,19.257 9.602,19.386 C9.420,19.563 9.090,19.550 8.921,19.363 C8.790,19.232 8.785,19.039 8.784,18.869 C8.786,16.271 8.787,13.674 8.784,11.078 C8.794,10.707 8.554,10.351 8.205,10.206 C7.829,10.043 7.353,10.146 7.087,10.452 C6.913,10.634 6.848,10.886 6.850,11.129 C6.851,15.522 6.850,19.914 6.850,24.307 C6.853,24.526 6.696,24.741 6.469,24.784 C6.268,24.841 6.085,24.719 5.931,24.611 C4.770,23.781 3.323,23.339 1.882,23.360 C1.378,23.372 0.945,23.830 0.978,24.320 C0.976,24.813 1.433,25.239 1.938,25.234 C2.851,25.245 3.765,25.485 4.538,25.962 C5.953,26.808 6.857,28.386 6.850,29.999 L5.877,29.999 C5.871,29.140 5.568,28.285 5.009,27.616 C4.414,26.897 3.545,26.388 2.605,26.238 C2.247,26.171 1.878,26.200 1.520,26.129 C0.831,25.986 0.245,25.449 0.070,24.784 C-0.166,23.986 0.225,23.070 0.972,22.666 C1.460,22.375 2.057,22.391 2.607,22.438 C3.755,22.525 4.876,22.880 5.872,23.438 Z"></path>
+                            </svg>
+                        </div>
+                        <a href="#"><h4>Enter Phone Number</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-how-it-work-box">
+                        <div class="icon">
+                            <svg width="30px" height="25px">
+                                <path fill-rule="evenodd" d="M28.926,21.103 C27.677,23.295 25.333,24.737 22.853,24.996 L21.481,24.996 C18.807,24.715 16.302,23.038 15.145,20.573 C13.450,17.249 14.556,12.817 17.604,10.696 C20.563,8.477 25.047,8.802 27.637,11.455 C30.194,13.876 30.754,18.085 28.926,21.103 ZM26.077,15.787 C25.216,15.795 24.355,15.790 23.494,15.800 C23.469,14.919 23.465,14.041 23.482,13.162 C22.611,13.162 21.740,13.159 20.869,13.164 C20.869,14.036 20.867,14.907 20.874,15.777 C20.006,15.805 19.135,15.787 18.267,15.795 C18.262,16.668 18.262,17.542 18.267,18.418 C19.137,18.425 20.011,18.393 20.881,18.450 C20.862,19.313 20.872,20.176 20.867,21.039 C21.738,21.039 22.611,21.053 23.484,21.051 C23.486,20.171 23.455,19.291 23.489,18.411 C24.352,18.420 25.213,18.418 26.077,18.428 C26.109,17.547 26.084,16.668 26.077,15.787 ZM10.422,7.892 C10.439,7.020 10.439,6.147 10.439,5.274 C13.047,5.257 15.657,5.284 18.264,5.265 C18.264,6.143 18.264,7.022 18.262,7.902 C15.649,7.900 13.034,7.917 10.422,7.892 ZM-0.000,7.902 L-0.000,5.272 C2.612,5.257 5.224,5.284 7.837,5.262 C7.827,6.145 7.827,7.025 7.820,7.907 C5.212,7.902 2.607,7.902 -0.000,7.902 ZM-0.000,0.016 C2.607,0.003 5.215,0.028 7.822,0.006 C7.834,0.883 7.829,1.758 7.824,2.636 C5.215,2.651 2.607,2.634 -0.000,2.639 L-0.000,0.016 ZM7.824,13.162 C5.217,13.172 2.607,13.159 -0.000,13.162 L-0.000,10.531 C2.607,10.523 5.215,10.538 7.822,10.526 C7.829,11.403 7.827,12.281 7.824,13.162 ZM7.824,18.416 C5.217,18.428 2.607,18.418 -0.000,18.418 L-0.000,15.795 C2.607,15.783 5.217,15.802 7.824,15.787 C7.827,16.663 7.827,17.540 7.824,18.416 ZM7.822,23.684 C5.215,23.682 2.607,23.682 -0.000,23.682 L-0.000,21.051 C2.607,21.044 5.217,21.051 7.824,21.049 C7.827,21.926 7.829,22.804 7.822,23.684 ZM15.791,10.528 C15.035,11.300 14.412,12.190 13.930,13.159 C12.763,13.164 11.599,13.162 10.432,13.162 C10.430,12.288 10.442,11.416 10.434,10.546 C12.220,10.506 14.006,10.543 15.791,10.528 ZM10.439,18.416 C10.425,17.542 10.434,16.670 10.442,15.797 C11.344,15.790 12.247,15.777 13.150,15.797 C13.042,16.660 13.032,17.533 13.154,18.396 C12.249,18.440 11.344,18.413 10.439,18.416 ZM13.930,21.053 C14.402,22.022 15.048,22.891 15.772,23.682 C13.993,23.672 12.213,23.704 10.434,23.665 C10.432,22.795 10.430,21.924 10.442,21.053 C11.604,21.031 12.768,21.051 13.930,21.053 Z"></path>
+                            </svg>
+                        </div>
+                        <a href="#"><h4>Recharge Your Amount</h4></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-how-it-work-box">
+                        <div class="icon">
+                            <svg width="30px" height="30px">
+                                <path fill-rule="evenodd" d="M29.203,14.146 L14.601,28.749 L21.249,28.749 C21.594,28.749 21.874,29.029 21.874,29.375 C21.874,29.720 21.594,29.999 21.249,29.999 L12.223,29.999 C12.222,29.999 12.221,29.999 12.220,29.999 C12.219,29.999 12.219,29.999 12.218,29.999 L8.750,29.999 C8.405,29.999 8.125,29.720 8.125,29.375 C8.125,29.029 8.405,28.749 8.750,28.749 L9.840,28.749 L1.967,20.877 C1.967,20.876 1.967,20.876 1.967,20.876 C1.967,20.876 1.967,20.876 1.966,20.876 L0.795,19.704 C0.282,19.191 -0.000,18.508 -0.000,17.779 C-0.000,17.049 0.282,16.365 0.795,15.853 L15.852,0.794 C16.365,0.282 17.049,-0.001 17.778,-0.001 C18.507,-0.001 19.191,0.282 19.704,0.795 L29.203,10.295 C30.265,11.356 30.265,13.085 29.203,14.146 ZM28.319,11.178 L23.085,5.944 L8.624,20.405 C8.502,20.527 8.342,20.588 8.182,20.588 C8.022,20.588 7.862,20.527 7.740,20.405 C7.496,20.161 7.496,19.765 7.740,19.522 L22.201,5.060 L18.820,1.678 C18.543,1.402 18.173,1.249 17.778,1.249 C17.383,1.249 17.013,1.402 16.736,1.678 L1.679,16.737 C1.402,17.013 1.250,17.383 1.250,17.779 C1.250,18.174 1.402,18.543 1.679,18.820 L2.409,19.550 L16.869,5.089 C17.113,4.845 17.509,4.845 17.753,5.089 C17.997,5.333 17.997,5.729 17.753,5.973 L3.293,20.434 L11.178,28.320 C11.455,28.597 11.823,28.748 12.218,28.749 L12.222,28.749 C12.617,28.749 12.986,28.597 13.262,28.320 L28.319,13.262 C28.894,12.688 28.894,11.753 28.319,11.178 ZM22.968,14.900 C22.846,15.022 22.686,15.083 22.526,15.083 C22.366,15.083 22.206,15.022 22.084,14.900 L20.316,13.132 C20.199,13.015 20.133,12.856 20.133,12.690 C20.133,12.524 20.199,12.366 20.316,12.248 L22.968,9.596 C23.085,9.479 23.244,9.413 23.410,9.413 C23.576,9.413 23.734,9.479 23.852,9.596 L25.619,11.364 C25.863,11.608 25.863,12.004 25.619,12.248 L22.968,14.900 ZM23.410,10.922 L21.642,12.690 L22.526,13.574 L24.294,11.806 L23.410,10.922 ZM15.856,22.012 C15.734,22.134 15.574,22.195 15.414,22.195 C15.254,22.195 15.094,22.134 14.972,22.012 C14.728,21.768 14.728,21.372 14.972,21.128 L15.237,20.863 C15.481,20.619 15.877,20.619 16.121,20.863 C16.365,21.107 16.365,21.503 16.121,21.746 L15.856,22.012 ZM10.480,23.852 C10.358,23.974 10.198,24.036 10.038,24.036 C9.878,24.036 9.719,23.974 9.596,23.852 C9.352,23.608 9.352,23.212 9.596,22.968 L14.514,18.050 C14.759,17.807 15.154,17.807 15.398,18.050 C15.642,18.294 15.642,18.690 15.398,18.934 L10.480,23.852 ZM13.381,22.719 C13.625,22.475 14.021,22.475 14.265,22.719 C14.509,22.963 14.509,23.359 14.265,23.603 L12.248,25.620 C12.126,25.742 11.966,25.803 11.806,25.803 C11.646,25.803 11.486,25.742 11.364,25.620 C11.120,25.376 11.120,24.980 11.364,24.736 L13.381,22.719 ZM6.901,22.129 C6.779,22.251 6.619,22.312 6.459,22.312 C6.299,22.312 6.139,22.251 6.017,22.129 C5.773,21.884 5.773,21.489 6.017,21.245 L6.282,20.980 C6.526,20.736 6.922,20.736 7.166,20.980 C7.410,21.224 7.410,21.619 7.166,21.863 L6.901,22.129 ZM18.593,3.365 C18.837,3.121 19.232,3.121 19.476,3.365 C19.721,3.609 19.721,4.005 19.477,4.249 L19.212,4.514 C19.090,4.636 18.930,4.697 18.770,4.697 C18.610,4.697 18.450,4.636 18.328,4.515 C18.084,4.271 18.084,3.875 18.328,3.630 L18.593,3.365 Z"></path>
+                            </svg>
+                        </div>
+                        <a href="#"><h4>Complete Payment</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <h2 style="text-align:center "><b>What our customers say</b></h2><br />
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+            </div>
+            <div class="item">
+                <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+            </div>
+            <div class="item">
+                <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+
+
+    <script src="~/Scripts/TYPEWRITTER.js"></script>
+
+    <h1 style="text-align:center; ">
+        <a href="" class="typewrite" data-period="2000" data-type='[ "ONLINE MOBILE RECHARGE", "ONLINE BILL PAY", "ONLINE MONEY TRANSFER", "ONLINE CASH DEPOSIT" ]'>
+            <span class="wrap"></span>
+        </a>
+    </h1>
+
+
+
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h3>CONNECTED TOGETHER</h3>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" HOME", "Index", "Home")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" FEEDBACK", "Feedbackpage", "Home")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" FAQ", "CustomerCare", "Home")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" GET CONTACT", "ContactUs", "Home")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" ABOUTUS", "AboutUs", "Home")</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h3>GET ADVANTAGE</h3>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" MY ACCOUNT", "Loginpage", "User")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" RECHARGE NOW", "onlinrEcharge", "User")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" POSTPAID BILLS", "POSTPAID_BILLS", "User")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" CALLER TUNES", "CALLERTUNE", "User")</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink("Logout", "Logout", "User")</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h3>SOCIALIZM</h3>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FACEBOOK</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>INSTAGRAM</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>TWITTER</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>GMAIL</a></li>
+                        <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>RECHARGE.CO</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="https://Recharge.com/">Recharge Corporation</a></u> is a Registered Recharge Website, Inc. Georga [a wholly owned subsidiary of pakistan. Karachi, Authentication, MN]</p>
+                    <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://Recharge.com" target="_blank">RECHARGE</a></p>
+                </div>
+                </hr>
+            </div>
+        </div>
+    </section>
+    <!-- ./Footer -->
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+</body>
+</html>

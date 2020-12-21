@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rechargefunctionsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adminreplay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="accountno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="replay" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="loginfo" Relationship="Self.FK_adminreplay_loginfo" FromRole="adminreplay" ToRole="loginfo" />
+  </EntityType>
+  <EntityType Name="CallerTune">
+    <Key>
+      <PropertyRef Name="Tansaction_id" />
+    </Key>
+    <Property Name="Tansaction_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Transaction_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TUNE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TUNE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHARGES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SINGER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="payment_method" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="cash_deposit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ACCOUNT_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Int32" />
+    <NavigationProperty Name="loginfo" Relationship="Self.FK_cash_deposit_loginfo" FromRole="cash_deposit" ToRole="loginfo" />
+  </EntityType>
+  <EntityType Name="contactus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MESSAGES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="replay" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="feedback1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="feedback11" Relationship="Self.FK_feedback_feedback" FromRole="feedback" ToRole="feedback1" />
+    <NavigationProperty Name="feedback2" Relationship="Self.FK_feedback_feedback" FromRole="feedback1" ToRole="feedback" />
+  </EntityType>
+  <EntityType Name="loginfo">
+    <Key>
+      <PropertyRef Name="Account_No" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="confirm_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mpin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="image_locations" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Balance" Type="Int32" />
+    <Property Name="Transaction_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mpincheck" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Int32" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_recharge_consumer_numbers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paymentmethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operators" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="accountno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="adminreplay" Relationship="Self.FK_adminreplay_loginfo" FromRole="loginfo" ToRole="adminreplay" />
+    <NavigationProperty Name="cash_deposit" Relationship="Self.FK_cash_deposit_loginfo" FromRole="loginfo" ToRole="cash_deposit" />
+    <NavigationProperty Name="loginfo1" Relationship="Self.FK_loginfo_loginfo" FromRole="loginfo" ToRole="loginfo1" />
+    <NavigationProperty Name="loginfo2" Relationship="Self.FK_loginfo_loginfo" FromRole="loginfo1" ToRole="loginfo" />
+    <NavigationProperty Name="roletable" Relationship="Self.FK_roletable_loginfo" FromRole="loginfo" ToRole="roletable" />
+    <NavigationProperty Name="userlogin" Relationship="Self.FK_userlogin_loginfo" FromRole="loginfo" ToRole="userlogin" />
+  </EntityType>
+  <EntityType Name="offer">
+    <Key>
+      <PropertyRef Name="Transaction_id" />
+    </Key>
+    <Property Name="Transaction_id" Type="Int32" Nullable="false" />
+    <Property Name="Transaction_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mpin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_recharge_consumernumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paymentmethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offercode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="offers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Network" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Transaction_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Payment_Methods" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="account_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reciever_Mobile_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="roletable">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="loginfo" Relationship="Self.FK_roletable_loginfo" FromRole="roletable" ToRole="loginfo" />
+  </EntityType>
+  <EntityType Name="transaction_table">
+    <Key>
+      <PropertyRef Name="Transaction_id" />
+    </Key>
+    <Property Name="Transaction_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Transaction_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mpin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Int32" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_recharge_consumer_numbers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paymentmethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operators_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userlogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="balance" Type="Int32" />
+    <Property Name="Transaction_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mpincheck" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Int32" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="offer_recharge_consumer_numbers" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="paymentmethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operators" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="account_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="loginfo" Relationship="Self.FK_userlogin_loginfo" FromRole="userlogin" ToRole="loginfo" />
+    <Property Name="mpin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_adminreplay_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="0..1" />
+    <End Role="adminreplay" Type="Self.adminreplay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="adminreplay">
+        <PropertyRef Name="accountno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cash_deposit_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="0..1" />
+    <End Role="cash_deposit" Type="Self.cash_deposit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="cash_deposit">
+        <PropertyRef Name="ACCOUNT_NUMBER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_feedback_feedback">
+    <End Role="feedback" Type="Self.feedback" Multiplicity="1" />
+    <End Role="feedback1" Type="Self.feedback" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="feedback">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="feedback1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_loginfo_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="1" />
+    <End Role="loginfo1" Type="Self.loginfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="loginfo1">
+        <PropertyRef Name="Account_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_roletable_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="1" />
+    <End Role="roletable" Type="Self.roletable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="roletable">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userlogin_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="0..1" />
+    <End Role="userlogin" Type="Self.userlogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="userlogin">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="rechargefunctionsEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adminreplay" EntityType="Self.adminreplay" />
+    <EntitySet Name="CallerTune" EntityType="Self.CallerTune" />
+    <EntitySet Name="cash_deposit" EntityType="Self.cash_deposit" />
+    <EntitySet Name="contactus" EntityType="Self.contactus" />
+    <EntitySet Name="feedback" EntityType="Self.feedback" />
+    <EntitySet Name="loginfo" EntityType="Self.loginfo" />
+    <EntitySet Name="offer" EntityType="Self.offer" />
+    <EntitySet Name="offers" EntityType="Self.offers" />
+    <EntitySet Name="roletable" EntityType="Self.roletable" />
+    <EntitySet Name="transaction_table" EntityType="Self.transaction_table" />
+    <EntitySet Name="userlogin" EntityType="Self.userlogin" />
+    <AssociationSet Name="FK_adminreplay_loginfo" Association="Self.FK_adminreplay_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="adminreplay" EntitySet="adminreplay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cash_deposit_loginfo" Association="Self.FK_cash_deposit_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="cash_deposit" EntitySet="cash_deposit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_feedback_feedback" Association="Self.FK_feedback_feedback">
+      <End Role="feedback" EntitySet="feedback" />
+      <End Role="feedback1" EntitySet="feedback" />
+    </AssociationSet>
+    <AssociationSet Name="FK_loginfo_loginfo" Association="Self.FK_loginfo_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="loginfo1" EntitySet="loginfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_roletable_loginfo" Association="Self.FK_roletable_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="roletable" EntitySet="roletable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userlogin_loginfo" Association="Self.FK_userlogin_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="userlogin" EntitySet="userlogin" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

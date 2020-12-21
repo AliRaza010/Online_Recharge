@@ -1,0 +1,91 @@
+﻿@model online_mobile_recharge.Models.loginfo
+
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/views/shared/allLayout.cshtml";
+}
+<link href="~/Content/signup.css" rel="stylesheet" />
+@using (Html.BeginForm("Signup", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <<div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-4">
+                <div class="account-box">
+                    <div class="logo ">
+                        <h1 style="color:red">SIGNUP </h1><br />
+                        <br />
+                     
+                    </div>
+                    <h4 style="color:limegreen;text-align:center"> @ViewBag.msg</h4>
+                    <h4 style="color:darkred;text-align:center"> ViewBag.sign</h4>
+                    <form class="form-signin" action="#">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+
+
+
+                       
+                        <div class="form-group">
+
+                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "USERNAME*", required = "required", autocomplete = "off" } })
+                            @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                        </div>
+                        <h6 style="color:darkred;text-align:center">@Session["du"]</h6>
+                        <h6 style="color:darkred;text-align:center">@Session["username"]</h6>
+                            
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Account_No, new { htmlAttributes = new { @class = "form-control", placeholder = "ACCOUNT NO*", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Account_No, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "EMAIL*", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "PASSWORD*", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.confirm_password, new { htmlAttributes = new { @class = "form-control", placeholder = "CONFIRM_PASSWORD*", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.confirm_password, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "ADDRESS*", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.mpin, new { htmlAttributes = new { @class = "form-control", placeholder = "MPIN*", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.mpin, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <label style="position:relative;left:30PX" class="checkbox">
+                                <input type="checkbox" value="remember-me" />
+                                Keep me signed in
+                            </label>
+                            <button class="btn btn-lg btn-block purple-bg" type="submit">
+                                SIGNUP
+                            </button>
+
+                            <br />
+                            <span style="position:relative;left:40PX;text-decoration:none"> @Html.ActionLink("HAVE AN ACCOUNT", "Loginpage", "User");</span>
+                            <br />
+
+</form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

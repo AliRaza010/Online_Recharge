@@ -1,0 +1,59 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.offers>
+
+@{
+    ViewBag.Title = "Viewoffers";
+    Layout = "~/views/shared/allLayout.cshtml";
+}
+
+<link href="~/Content/viewoffers.css" rel="stylesheet" />
+<h2 style="background-color:gray;text-align:center">
+    <img src="~/Images/3mJF.gif" width="200px"/></h2>
+<div style="background-color:dodgerblue;opacity:0.7">
+    <table style="text-align:center;color:black;font-weight:bold" class="table">
+        <tr>
+            
+            <th style="text-align:center;color:black;font-weight:bold">
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th style="text-align:center;color:black;font-weight:bold">
+                @Html.DisplayNameFor(model => model.Network)
+            </th>
+            <th style="text-align:center;color:black;font-weight:bold">
+                @Html.DisplayNameFor(model => model.Description_)
+            </th>
+            <th style="text-align:center;color:black;font-weight:bold">
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td style="text-align:center;color:black;font-weight:bold">
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Network)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description_)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                  
+                    @Html.ActionLink("GET OFFER", "Editoffers", new { id = item.ID }) |
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

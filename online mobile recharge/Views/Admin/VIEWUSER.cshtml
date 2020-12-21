@@ -1,0 +1,87 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.loginfo>
+
+@{
+    ViewBag.Title = "VIEWUSER";
+    Layout = "~/views/shared/AdminLayout.cshtml";
+}
+
+<link href="~/Content/viewuser.css" rel="stylesheet" />
+
+<h2 style="background-color:cornflowerblue;color:white;text-align:center">REGISTERED USER LIST</h2>
+<br />
+<div style="background-color: #CCCCFF">
+    <marquee direction="left"><strong style="background-color:navy;color:white;font-weight:bolder">TOTAL USER IN YOUR WEBSITE IS : <span style="background-color:red;color:white;font-weight:bolder">@Session["total user"]</span> </strong></marquee>
+</div>
+<table style="width:100%;background-color:blue;color:white;opacity:0.7" class="table" >
+    <tr>
+      
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Account_No)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+
+
+
+
+
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+    
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.mpin)
+        </th>
+        
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+        
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Account_No)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+           
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.mpin)
+            </td>
+        
+
+            <td>
+           
+                <button style="background-color:white;color:blue">  @Html.ActionLink("USER Details", "Details", new { id = item.Account_No }) | </button>
+         
+            </td>
+        </tr>
+    }
+
+</table>
+<script src="~/Scripts/jquery-1.10.2.js"></script>

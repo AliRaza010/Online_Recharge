@@ -1,0 +1,88 @@
+﻿@model online_mobile_recharge.Models.contactus
+
+@{
+    ViewBag.Title = "REPLAY";
+    Layout = "~/views/shared/AdminLayout.cshtml";
+}
+
+<h2>REPLAY</h2>
+<div style="background-color:blue;opacity:0.9">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+
+        <div class="form-horizontal">
+            <h4 style="background-color:darkblue;color:white;font-weight:bold;text-align:center">REPLAY MESSAGES</h4>
+
+            <h4 style="color:white;font-size:larger;text-align:center;font-weight:bold;background-color:darkslategrey"> @Session["replay"]</h4>
+            <br />
+            <br />
+          
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.id)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PHONE, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PHONE, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PHONE, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.replay, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.replay, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.replay, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Replay" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MESSAGES, new { htmlAttributes = new { @class = "form-control", style = "display: none;" } })
+                @Html.ValidationMessageFor(model => model.MESSAGES, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sender, new { htmlAttributes = new { @class = "form-control", style = "display: none;" } })
+                @Html.ValidationMessageFor(model => model.sender, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control", style = "display: none;" } })
+                @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>

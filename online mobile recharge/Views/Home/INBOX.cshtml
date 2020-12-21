@@ -1,0 +1,40 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.adminreplay>
+
+@{
+    ViewBag.Title = "INBOX";
+    Layout = "~/views/shared/allLayout.cshtml";
+}
+
+
+<link href="~/Content/inboxreplay.css" rel="stylesheet" />
+
+<h2 style="background-color:darkblue;color:white;text-align:center">WELCOME MR / MRS : @Session["uname"] TO YOUR INBOX</h2>
+<div style=" background-color:gray; opacity:0.6">
+    <table style="color:white;text-align:center;font-weight:bold" class="table">
+        <tr>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.sender)
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayNameFor(model => model.replay)
+            </th>
+         
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style=" border:2px solid black;background-color:black;padding:20px">
+                    @Html.DisplayFor(modelItem => item.sender)
+                </td>
+                <td style=" border:2px solid black;background-color:red;padding:20px">
+                    @Html.DisplayFor(modelItem => item.replay)
+                </td>
+               
+           
+            </tr>
+        }
+
+    </table>
+    </div>

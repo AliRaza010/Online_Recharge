@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rechargefunctionsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adminreplay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="accountno" Type="varchar" MaxLength="50" />
+    <Property Name="sender" Type="varchar" MaxLength="50" />
+    <Property Name="replay" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CallerTune">
+    <Key>
+      <PropertyRef Name="Tansaction_id" />
+    </Key>
+    <Property Name="Tansaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Transaction_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Account_No" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="varchar" MaxLength="50" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="varchar" MaxLength="50" />
+    <Property Name="TUNE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="TUNE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CHARGES" Type="varchar" MaxLength="50" />
+    <Property Name="SINGER" Type="varchar" MaxLength="50" />
+    <Property Name="payment_method" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="cash_deposit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="int" />
+  </EntityType>
+  <EntityType Name="contactus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE" Type="varchar" MaxLength="50" />
+    <Property Name="MESSAGES" Type="varchar" MaxLength="50" />
+    <Property Name="sender" Type="varchar" MaxLength="50" />
+    <Property Name="replay" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="feedback">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="phone" Type="varchar" MaxLength="50" />
+    <Property Name="rating" Type="varchar" MaxLength="50" />
+    <Property Name="feedback" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="loginfo">
+    <Key>
+      <PropertyRef Name="Account_No" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="Account_No" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="confirm_password" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="mpin" Type="varchar" MaxLength="50" />
+    <Property Name="image_locations" Type="varchar" MaxLength="50" />
+    <Property Name="Balance" Type="int" />
+    <Property Name="Transaction_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="mpincheck" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="int" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="varchar" MaxLength="50" />
+    <Property Name="offer/recharge/consumer_numbers" Type="varchar" MaxLength="50" />
+    <Property Name="paymentmethod" Type="varchar" MaxLength="50" />
+    <Property Name="operators" Type="varchar" MaxLength="50" />
+    <Property Name="accountno" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="offer">
+    <Key>
+      <PropertyRef Name="Transaction_id" />
+    </Key>
+    <Property Name="Transaction_id" Type="int" Nullable="false" />
+    <Property Name="Transaction_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Account_No" Type="varchar" MaxLength="50" />
+    <Property Name="mpin" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="varchar" MaxLength="50" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="varchar" MaxLength="50" />
+    <Property Name="offer/recharge/consumernumber" Type="varchar" MaxLength="50" />
+    <Property Name="paymentmethod" Type="varchar" MaxLength="50" />
+    <Property Name="operator" Type="varchar" MaxLength="50" />
+    <Property Name="offercode" Type="varchar" MaxLength="50" />
+    <Property Name="offer_type" Type="varchar" MaxLength="50" />
+    <Property Name="offer_description" Type="varchar" MaxLength="50" />
+    <Property Name="offer_price" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="offers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Network" Type="varchar" MaxLength="50" />
+    <Property Name="Description_" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="varchar" MaxLength="50" />
+    <Property Name="Transaction_name" Type="varchar" MaxLength="50" />
+    <Property Name="Payment_Methods" Type="varchar" MaxLength="50" />
+    <Property Name="account_no" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever_Mobile_No" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="roletable">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="transaction_table">
+    <Key>
+      <PropertyRef Name="Transaction_id" />
+    </Key>
+    <Property Name="Transaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Transaction_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Account_No" Type="varchar" MaxLength="50" />
+    <Property Name="mpin" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="int" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="varchar" MaxLength="50" />
+    <Property Name="offer/recharge/consumer_numbers" Type="varchar" MaxLength="50" />
+    <Property Name="paymentmethod" Type="varchar" MaxLength="50" />
+    <Property Name="operators_" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="userlogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="user id" Type="varchar" MaxLength="50" />
+    <Property Name="balance" Type="int" />
+    <Property Name="Transaction_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="mpincheck" Type="varchar" MaxLength="50" />
+    <Property Name="amount" Type="int" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="varchar" MaxLength="50" />
+    <Property Name="offer/recharge/consumer_numbers" Type="varchar" MaxLength="50" />
+    <Property Name="paymentmethod" Type="varchar" MaxLength="50" />
+    <Property Name="operators" Type="varchar" MaxLength="50" />
+    <Property Name="account_no" Type="varchar" MaxLength="50" />
+    <Property Name="mpin" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_cash_deposit_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="0..1" />
+    <End Role="cash_deposit" Type="Self.cash_deposit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="cash_deposit">
+        <PropertyRef Name="ACCOUNT_NUMBER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_feedback_feedback">
+    <End Role="feedback" Type="Self.feedback" Multiplicity="1" />
+    <End Role="feedback1" Type="Self.feedback" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="feedback">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="feedback1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_loginfo_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="1" />
+    <End Role="loginfo1" Type="Self.loginfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="loginfo1">
+        <PropertyRef Name="Account_No" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_roletable_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="1" />
+    <End Role="roletable" Type="Self.roletable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="roletable">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userlogin_loginfo">
+    <End Role="loginfo" Type="Self.loginfo" Multiplicity="0..1" />
+    <End Role="userlogin" Type="Self.userlogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loginfo">
+        <PropertyRef Name="Account_No" />
+      </Principal>
+      <Dependent Role="userlogin">
+        <PropertyRef Name="user id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="rechargefunctionsModelStoreContainer">
+    <EntitySet Name="adminreplay" EntityType="Self.adminreplay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CallerTune" EntityType="Self.CallerTune" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cash_deposit" EntityType="Self.cash_deposit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contactus" EntityType="Self.contactus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="feedback" EntityType="Self.feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="loginfo" EntityType="Self.loginfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="offer" EntityType="Self.offer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="offers" EntityType="Self.offers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="roletable" EntityType="Self.roletable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transaction_table" EntityType="Self.transaction_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userlogin" EntityType="Self.userlogin" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_cash_deposit_loginfo" Association="Self.FK_cash_deposit_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="cash_deposit" EntitySet="cash_deposit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_feedback_feedback" Association="Self.FK_feedback_feedback">
+      <End Role="feedback" EntitySet="feedback" />
+      <End Role="feedback1" EntitySet="feedback" />
+    </AssociationSet>
+    <AssociationSet Name="FK_loginfo_loginfo" Association="Self.FK_loginfo_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="loginfo1" EntitySet="loginfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_roletable_loginfo" Association="Self.FK_roletable_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="roletable" EntitySet="roletable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userlogin_loginfo" Association="Self.FK_userlogin_loginfo">
+      <End Role="loginfo" EntitySet="loginfo" />
+      <End Role="userlogin" EntitySet="userlogin" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

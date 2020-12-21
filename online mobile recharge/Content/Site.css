@@ -1,0 +1,73 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+h6 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'Bell MT';
+}
+
+.para {
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    background-image: url('../Images/8.A-Header-desktop-1731-x-305-.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.side {
+    width: 40%;
+    height: auto;
+    font-weight: bold;
+    margin-top: 8%;
+}
+
+    .side ul {
+        color: white;
+        font-size: 26px;
+    }
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+    .carousel-indicators li.active {
+        background-color: #f4511e;
+    }
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.CallerTune>
+
+@{
+    ViewBag.Title = "CALLERTUNE";
+    Layout = "~/views/shared/allLayout.cshtml";
+
+}
+
+
+<link href="~/Content/CALLERTUNE.css" rel="stylesheet" />
+<h2 style="background-color:darkblue;color:white;text-align:center">CALLER TUNE</h2>
+<div style=" background-color:gray; opacity:0.8">
+    <table class="table">
+        <tr>
+      
+            <th style="text-align:center;font-weight:bold">
+                @Html.DisplayNameFor(model => model.TUNE_CODE)
+            </th>
+            <th style="text-align:center;font-weight:bold">
+                @Html.DisplayNameFor(model => model.TUNE_NAME)
+            </th>
+            <th style="text-align:center;font-weight:bold">
+                @Html.DisplayNameFor(model => model.SINGER)
+            </th>
+            <th style="text-align:center;font-weight:bold">
+                @Html.DisplayNameFor(model => model.CHARGES)
+            </th>
+            
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+          
+                <td style="text-align:center;font-weight:bold;color:white">
+                    @Html.DisplayFor(modelItem => item.TUNE_CODE)
+                </td>
+                <td style="text-align:center;font-weight:bold;color:white">
+                    @Html.DisplayFor(modelItem => item.TUNE_NAME)
+                </td>
+                <td style="text-align:center;font-weight:bold;color:white">
+                    @Html.DisplayFor(modelItem => item.CHARGES)
+                </td>
+                <td style="text-align:center;font-weight:bold;color:white">
+                    @Html.DisplayFor(modelItem => item.SINGER)
+                </td>
+                <td>
+                    <button class="btn-google">
+                        @Html.ActionLink("ACTIVATE", "ACTIVATE", new { id = item.TUNE_CODE }) 
+                       
+                    </button>
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

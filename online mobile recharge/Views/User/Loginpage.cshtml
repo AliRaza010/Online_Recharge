@@ -1,0 +1,84 @@
+﻿@model online_mobile_recharge.Models.loginfo
+
+@{
+    ViewBag.Title = "Loginpage";
+    Layout = "~/views/shared/allLayout.cshtml";
+}
+
+
+<link href="~/Content/loginform.css" rel="stylesheet" />
+
+  
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-4">
+                    <div class="account-box">
+                        <div class="logo ">
+
+                            <h1 style="color:darkred">LOGIN</h1><br />
+                           
+                          <h5 style="text-align:center ; color : darkred">@Session["empty"]</h5>
+                        </div>
+                        <form class="form-signin" action="#">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "username", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "password", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                            </div>
+                            <label style="position:relative;left:30px" class="checkbox">
+                                <input type="checkbox" value="remember-me" />
+                                Keep me signed in
+                            </label>
+                            <button class="btn btn-lg btn-block btn-facebook" type="submit">
+                                LOGIN
+                            </button>
+                        </form>
+                       
+                        <div class="or-box">
+                            <span class="or">OR</span>
+                            <div class="row">
+                                <div class="col-md-6 row-block">
+                                    
+                                    <a href="https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=110" class="btn btn-facebook btn-block">Facebook</a>
+                                </div>
+                                <div class="col-md-6 row-block">
+                                    <a href="https://accounts.google.com/ServiceLogin/signinchooser?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="btn btn-google btn-block">Google</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="or-box row-block">
+                            <div class="row">
+                                <div class="col-md-12 row-block">
+                                    <p class="btn btn-warning btn-block">@Html.ActionLink(" Create New Account","Signup","User")</p>
+                                    <br />
+                                    <h4 style="color:red;text-align:center;font-weight:bolder">@ViewBag.ERROR</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    }
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

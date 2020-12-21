@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <link href="~/Content/footer.css" rel="stylesheet" />
+</head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#myPage"><B style="color:red">ON</B><B style="color:gray">LINE</B>_<B style="color:yellow">RECHARGE</B></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+
+                        @if (Session["uname"] != null)
+                        {
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+
+
+
+                                    DEAR @Session["uname"]
+                                    <span style="display:none">@Session["ID"]</span>
+
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <h5 style="font-weight:bold;text-align:center;background-color:gray"> Your Balance is  @Session["balance"]</h5>
+                                    <li>@Html.ActionLink("Logout", "Logout", "User")</li>
+
+                                </ul>
+                            </li>
+
+
+
+                            if (User.Identity.IsAuthenticated)
+
+                            {
+
+
+                                if (User.IsInRole("User"))
+                                {
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            OUR SERVICES
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("DEPOSIT MONEY", "Deposit", new { id = @Session["ID"] })</li>
+                                            <li>@Html.ActionLink("RECHARGE NOW", "onlinerecharge", new { id = @Session["ID"] })</li>
+                                            <li>@Html.ActionLink("POSPAID BILL", "POSTPAID_BILLS")</li>
+                                            <li>@Html.ActionLink("CALLER TUNE", "CALLERTUNE", "User")</li>
+                                            <li>@Html.ActionLink("MONEY TRANSFER", "Moneytransfer", new { id = @Session["ID"] })</li>
+                                            <li>@Html.ActionLink("VIEW OFFERS", "Viewoffers", "User")</li>
+                                        </ul>
+                                    </li>
+
+
+                                }
+
+
+                            }
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("MY ACCOUNT", "Loginpage", "User")</li>
+
+                        }
+                        <li>@Html.ActionLink("ABOUT US", "AboutUs", "Home")</li>
+                        <li>@Html.ActionLink("CONTACT US", "ContactUs", "Home")</li>
+                        <li>@Html.ActionLink("FEEDBACK", "Feedbackpage", "Home")</li>
+                        <li>@Html.ActionLink("CUSTOMER CARE", "CustomerCare", "Home")</li>
+
+
+
+                        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+
+        
+        <div class="container-fluid body-content">
+            @RenderBody()
+            </div>
+        <br />
+        <br />
+        <!-- Footer -->
+        <section id="footer">
+            <div class="container">
+                <div class="row text-center text-xs-center text-sm-left text-md-left">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <h3>CONNECTED TOGETHER</h3>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" HOME", "Index", "Home")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" FEEDBACK", "Feedbackpage", "Home")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" FAQ", "CustomerCare", "Home")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" GET CONTACT", "ContactUs", "Home")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" ABOUTUS", "AboutUs", "Home")</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <h3>GET ADVANTAGE</h3>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" MY ACCOUNT", "Loginpage", "User")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" RECHARGE NOW", "onlinrEcharge", "User")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" POSTPAID BILLS", "POSTPAID_BILLS", "User")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink(" CALLER TUNES", "CALLERTUNE", "User")</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@Html.ActionLink("Logout", "Logout", "User")</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <h3>SOCIALIZM</h3>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FACEBOOK</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>INSTAGRAM</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>TWITTER</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>GMAIL</a></li>
+                            <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>RECHARGE.CO</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                        <ul class="list-unstyled list-inline social text-center">
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                    </hr>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                        <p><u><a href="https://Recharge.com/">Recharge Corporation</a></u> is a Registered Recharge Website, Inc. Georga [a wholly owned subsidiary of pakistan. Karachi, Authentication, MN]</p>
+                        <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://Recharge.com" target="_blank">RECHARGE</a></p>
+                    </div>
+                    </hr>
+                </div>
+            </div>
+        </section>
+        <!-- ./Footer -->
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/moment.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
+        <script src="~/Scripts/Customscript.js"></script>
+          
+    </body>
+</html>

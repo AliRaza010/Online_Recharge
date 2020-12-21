@@ -1,0 +1,141 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.transaction_table>
+
+@{
+    ViewBag.Title = "ViewTransactionHistory";
+
+    Layout = "~/views/shared/AdminLayout.cshtml";
+}
+
+
+
+
+
+
+
+<div style="background-color: #CCCCFF">
+    <marquee direction="left"><strong style="background-color:navy;color:white;font-weight:bolder">TOTAL TRANSACTION AMOUNT FROM YOUR WEBSITE IS :&nbsp; <span style="background-color:red;color:white;font-weight:bolder">@Model.Sum(a => a.amount)</span> </strong></marquee>
+</div>
+
+
+<div style="text-align:center">
+
+
+
+
+    <br /><br />
+
+    <div class="container">
+        <b>Search By : </b>
+        <select id="SearchBy">
+            <option value="Name">Name</option>
+            <option value="Account_No">Account_No</option>
+            <option value="date">Date</option>
+        </select><br /><br />
+
+
+        @Html.TextBox("Search")<input type="submit" id="SearchBtn" value="Search" /><p style="color:grey">Date format : DAY/MONTH/YEAR</p>
+
+
+    </div>
+</div>
+<h2 style="background-color:cornflowerblue;color:white;text-align:center">TRANSACTION HISTORY</h2>
+<div style="background-color: #CCCCFF">
+    <marquee direction="right">
+        <strong style="background-color:navy;color:white;font-weight:bolder">
+            TOTAL TRANSACTION FROM YOUR WEBSITE IS : &nbsp;<span style="background-color:red;color:white;font-weight:bolder">
+                @Session["total"]
+            </span>
+        </strong>
+    </marquee>
+</div>
+<table style="width:100%;background-color:blue;color:white;opacity:0.7" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Transaction_Name</th>
+            <th>Type</th>
+            <th>Account_No</th>
+            <th>offer/recharge/consumer_number</th>
+            <th>paymentmethod</th>
+            <th>amount</th>
+            <th>time</th>
+            <th>date</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody id="DataSearching">
+        @foreach (var Item in Model)
+            {
+            <tr>
+
+
+                <td>@Item.Transaction_Name</td>
+                <td>@Item.Type</td>
+                <td>@Item.Account_No</td>
+                <td>@Item.offer_recharge_consumer_numbers</td>
+                <td>@Item.paymentmethod</td>
+                <td>@Item.amount</td>
+                <td>@Item.time</td>
+                <td>@Item.date</td>
+
+
+
+
+
+
+
+
+
+
+
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        $("#SearchBtn").click(function () {
+            var SearchBy = $("#SearchBy").val();
+            var SearchValue = $("#Search").val();
+            var SetData = $("#DataSearching");
+            SetData.html("");
+            $.ajax({
+                type: "post",
+                url: "/Admin/GetSearchingData?SearchBy=" + SearchBy + "&SearchValue=" + SearchValue,
+                contentType: "html",
+                success: function (result) {
+                    if (result.length == 0) {
+                        SetData.append('<tr style="color:red"><td colspan="3">No Match Data</td></tr>')
+                    }
+                    else {
+                        $.each(result, function (Index, value) {
+                            var Data = "<tr>" +
+                                "<td>" + value.Transaction_Name + "</td>" +
+                                "<td>" + value.Type + "</td>" +
+                                "<td>" + value.Account_No + "</td>" +
+                                "<td>" + value.offer / recharge / consumer_number + "</td>" +
+                                "<td>" + value.paymentmethod + "</td>" +
+                                "<td>" + value.amount + "</td>" +
+                                "<td>" + value.time + "</td>" +
+                                "<td>" + value.date + "</td>" +
+                                "</tr>";
+                            SetData.append(Data);
+
+                        });
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script src="~/Scripts/bootstrap.min.js"></script>

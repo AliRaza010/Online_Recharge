@@ -1,0 +1,58 @@
+﻿@model IEnumerable<online_mobile_recharge.Models.feedback>
+
+@{
+    ViewBag.Title = "VIEWFEEDBACK";
+    Layout = "~/views/shared/AdminLayout.cshtml";
+}
+
+<h2 style="background-color:cornflowerblue;color:white;text-align:center">VIEW FEEDBACK LIST</h2>
+<br />
+
+
+<table style="width:100%;background-color:blue;color:white;opacity:0.7" class="table">
+    <tr>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.rating)
+        </th>
+        <th style="text-align:center">
+            @Html.DisplayNameFor(model => model.feedback1)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.rating)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.feedback1)
+            </td>
+            
+
+      
+        </tr>
+    }
+
+</table>
+<script src="~/Scripts/jquery-1.10.2.js"></script>

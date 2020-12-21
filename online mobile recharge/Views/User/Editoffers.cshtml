@@ -1,0 +1,108 @@
+﻿@model online_mobile_recharge.Models.offers
+
+@{
+    ViewBag.Title = "Editoffers";
+    Layout = "~/views/shared/allLayout.cshtml";
+}
+
+
+<link href="~/Content/GETOFFERS.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+
+
+ 
+
+<!-- Sections -->
+<section id="contact">
+    <div id="map"></div>
+    <div class="container text-center">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                <div class="contact-form-area">
+                    <h3 style="color:white;font-weight:bold;background-color:gray">GET OFFERS</h3>
+
+                    <h4 style="color:darkgreen;font-weight:bold"> @Session["offers"]</h4>
+                    <h4 style="color:darkred;font-weight:bold"> @Session["OFF"]</h4>
+                    <br />
+
+
+
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Network, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Network, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+
+
+
+                        
+
+
+
+
+
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Description_, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Description_, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+
+
+
+
+
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+
+
+
+
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Reciever_Mobile_No, new { htmlAttributes = new { @class = "form-control", placeholder = "ENTER NUMBER OF RECHARGE", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Reciever_Mobile_No, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <div style="padding:20px" class="form-group">
+
+                                @Html.DropDownListFor(m => m.Payment_Methods, new SelectList(new[] { "CREDIT CARD", "DEBIT CARD", "JAZZ CASH" }), "PAYMENT METHODS")
+
+
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.account_no, new { htmlAttributes = new { @class = "form-control", placeholder = "ACCOUNT NUMBER", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.account_no, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @class = "form-control", placeholder = "AMOUNT", required = "required", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.amount, "", new { @class = "text-danger" })
+                            </div>
+
+
+                            <input type="submit" class="btn btn-primary contact-btn" value="GET OFFER" />
+            </div>
+            </div>
+        </div>
+    </div> <!-- /container -->
+</section>
+}
+<!-- ADD THis before ending body tag -->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCZ3R3HV2ECPiClKyFX8Y_UMFg6T_2L1e0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js"></script>
+
+
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
